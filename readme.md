@@ -20,6 +20,12 @@ zero grafica solo js.
 
 -Individuare dall'utente i km che dovrà percorrere e la sua età
 -In base alle informazioni trapelate calcolare il prezzo totale del viaggio tenendo conto degli sconti
+    -Moltiplicare l'età con i 0.21 €
+    -Applicare gli sconti
+        -SE l'utente è under 18 applicare il 20% di sconto
+        -ALTRIMENTI SE è Over 65 applicare il 40% di sconto
+        -ALTRIMENTI non applicare nessuno sconto
+
 -Mostrare il prezzo finale
 
 # Tools
