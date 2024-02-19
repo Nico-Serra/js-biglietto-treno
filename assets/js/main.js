@@ -30,14 +30,14 @@ let priceTicket = priceKm * trip;
 console.log(priceKm * trip);
 
 //Sconti
-let discounted100 = priceTicket / 100;
-console.log(discounted100);
+//let discounted100 = priceTicket / 100;
+//console.log(discounted100);
 
-let salesUnder18 = discounted100 * 20
 
-let salesOver65 = discounted100 * 40
+let priceTicketFloat = Number(priceTicket).toFixed(2);
+console.log(priceTicketFloat);
 
-console.log(typeof salesUnder18, typeof salesOver65);
+//console.log(typeof salesUnder18, typeof salesOver65);
 
 /*
 -SE l'utente è under 18 applicare il 20% di sconto
@@ -49,17 +49,24 @@ if (userAge < 18) {
     //console.log('Hai diritto al 20% di sconto');
     //console.log(Number(priceTicket.toFixed(2) - (discounted100.toFixed(2) * salesUnder18)).toFixed(2))
     alert('Hai diritto al 20% di sconto');
-    alert(`Il prezzo del biglietto è ${Number(priceTicket.toFixed(2) - salesUnder18).toFixed(2)}€`)
+    let salesUnder18 = Number(priceTicket - (priceTicket * 20) / 100).toFixed(2)
+    console.log(salesUnder18);
+    alert(`Il prezzo del tuo biglietto è ${salesUnder18}€`)
 
 } else if (userAge > 65) {
     //console.log('Hai diritto al 40% di sconto');
     //console.log(Number(priceTicket.toFixed(2) - (discounted100.toFixed(2) * salesOver65)).toFixed(2))
     alert('Hai diritto al 40% di sconto');
-    alert(`Il prezzo del biglietto è ${Number(priceTicket.toFixed(2) - salesOver65).toFixed(2)}€`)
+    let salesOver65 = Number(priceTicket - (priceTicket * 20) / 100).toFixed(2)
+    console.log(salesOver65);
+    alert(`Il prezzo del tuo biglietto è ${salesOver65}€`)
+
 } else {
     //console.log('non hai diritto a nessuno sconto');
     alert('non hai diritto a nessuno sconto');
-    alert(`Il prezzo del biglietto è ${priceTicket.toFixed(2)}€`)
+    alert(`Il prezzo del tuo biglietto è ${priceTicketFloat}€`)
 }
 
 //-Mostrare il prezzo finale
+alert(`Il prezzo del tuo biglietto è ${}`)
+
